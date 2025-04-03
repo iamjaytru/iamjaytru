@@ -3,6 +3,7 @@ import About from "./about";
 import SocialLinks from "./social-links";
 
 export default function HeroSection() {
+  
   return (
     <div className="flex flex-col md:flex-row items-center justify-between h-full gap-8 md:gap-12">
       <div className="flex flex-col w-full md:w-auto flex-1 pl-4 space-y-4 md:space-y-6">

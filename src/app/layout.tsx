@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "./component/ui/theme-provider";
+import Loader from "./component/ui/loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Loader duration={3000} />
           {children}
         </ThemeProvider>
       </body>

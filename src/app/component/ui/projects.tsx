@@ -25,12 +25,12 @@ export default function Projects() {
   ];
 
   const otherProjects = [
+    "Construction Site",
     "Weather App",
-    "Task Manager",
-    "Recipe Finder",
+    "Pomodoro Timer",
+    "Temperature Converter",
     "Portfolio Site",
-    "Blog Platform",
-    "Quiz App",
+    "Simple Calculator",
   ];
 
   return (
@@ -114,7 +114,7 @@ export default function Projects() {
 
           <div className="mt-24">
             <h3 className="text-2xl font-bold text-white mb-8 relative after:content-[''] after:block after:w-12 after:h-1 after:bg-[#64ffda] after:mt-2">
-              Other Projects
+             Other Hands on Projects
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {otherProjects.map((project) => (
@@ -126,7 +126,7 @@ export default function Projects() {
                     <Folder size={24} className="text-[#64ffda] mb-2" />
                     <div className="flex gap-3">
                       <Link
-                        href="#"
+                        href="https://github.com/iamjaytru"
                         aria-label={`GitHub repository for ${project}`}
                         className="text-primary/60 hover:text-[#64ffda] transition-colors"
                         target="_blank"
@@ -146,7 +146,7 @@ export default function Projects() {
                     </div>
                   </div>
                   <h4 className="text-white font-bold text-lg mb-3 hover:text-[#64ffda] transition-colors">
-                    <Link href="#" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://github.com/iamjaytru" target="_blank" rel="noopener noreferrer">
                       {project}
                     </Link>
                   </h4>
@@ -156,7 +156,7 @@ export default function Projects() {
                   </p>
                   <div className="flex flex-wrap gap-2 text-xs text-primary/60 font-mono">
                     <span>React</span>
-                    <span>TypeScript</span>
+                    <span>TypeScript/Javascript</span>
                     <span>Tailwind</span>
                   </div>
                 </div>

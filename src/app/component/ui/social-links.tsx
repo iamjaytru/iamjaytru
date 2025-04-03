@@ -30,7 +30,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: "Instagram",
-    url: "https://instagram.com/chuuweikejude",
+    url: "https://instagram.com/chukuweikejude",
     icon: Instagram,
     ariaLabel: "Instagram profile",
   },

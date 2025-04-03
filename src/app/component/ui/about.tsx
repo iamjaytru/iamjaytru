@@ -21,7 +21,7 @@ export default function About() {
           </p>
         </div>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
-          {['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'Git'].map((tech) => (
+          {['React', 'JavaScript (ES6+)', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'Git'].map((tech) => (
             <div key={tech} className="flex items-center">
               <span className="text-[#64ffda] mr-2">▹</span>
               <span className="text-gray-400 text-sm md:text-base">{tech}</span>

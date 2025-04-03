@@ -10,15 +10,15 @@ import ContactSection from "./contact-section";
 import Footer from "./footer";
 
 export default function Layout() {
-  const [scrolled, setScrolled] = useState<boolean>(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const handleScroll = debounce(() => {
-      setScrolled(window.scrollY > 50);
-    }, 100);
+    // Delay showing content to allow loader to finish
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 2600);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
