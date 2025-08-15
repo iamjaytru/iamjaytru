@@ -1,9 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
 
-const NavBar = (props: Props) => {
+const NavBar = () => {
   return (
     <nav className="hidden md:flex items-center space-x-8">
       <Link

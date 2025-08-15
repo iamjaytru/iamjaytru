@@ -20,7 +20,7 @@ export default function HeroSection() {
         </header>
 
         <p className="text-primary/60 sm:text-primary/40 text-base sm:text-lg max-w-lg">
-          I'm passionate about building responsive, accessible web applications
+          I&apos;m passionate about building responsive, accessible web applications
           with modern technologies.
         </p>
 

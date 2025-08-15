@@ -8,15 +8,15 @@ export default function ContactSection() {
     >
       <div className="container mx-auto max-w-2xl">
         <p className="text-[#64ffda] text-sm md:text-base font-mono mb-3">
-          What's Next?
+          What&apos;s Next?
         </p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
           Get In Touch
         </h2>
         <p className="text-primary/60 text-sm sm:text-base mb-10 md:mb-12 max-w-lg mx-auto">
-          I'm excited to connect with other developers and explore new
+          I&apos;m excited to connect with other developers and explore new
           opportunities. Whether you have advice, want to collaborate, or just
-          want to say hi, I'd love to hear from you!
+          want to say hi, I&apos;d love to hear from you!
         </p>
         <Link
           href="mailto:chukuweikejude7@gmail.com"
