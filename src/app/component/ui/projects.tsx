@@ -1,36 +1,68 @@
 import { Github, ExternalLink, Folder } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-
 export default function Projects() {
   const featuredProjects = [
     {
-      title: "E-commerce Website",
+      title: "MyStorez",
       description:
-        "A responsive e-commerce site built with React and Node.js. Features include product listings, shopping cart functionality, and user authentication.",
-      tech: ["React", "TypeScript", "Tailwind CSS", "MongoDB", "Node.js"],
-      githubUrl: "https://github.com/Configcorp-com/grand-plaza",
-      liveUrl: "#",
-      image: "/ecommerce-placeholder.jpg",
+        "A multi-vendor e-commerce platform built to help businesses create online stores, manage products, process orders, and sell across digital channels. I am currently the CEO and lead developer behind the platform.",
+      tech: ["Laravel", "React", "Inertia.js", "Tailwind CSS", "MySql", "Typescript"],
+      githubUrl: "https://github.com/iamjaytru",
+      liveUrl: "https://mystorez.ng",
+      image: "/images/mystorez.png",
     },
     {
-      title: "Grand Chat",
-      description:
-        "A real-time chat application with authentication and message history. Built with modern web technologies for seamless communication.",
-      tech: ["React", "Typescript", "Tailwind CSS", "WebSockets"],
-      githubUrl: "https://github.com/yourusername/grand-chat",
-      liveUrl: "#",
-      image: "/chat-placeholder.jpg",
+      title: "Central Lab",
+       description:
+        "A laboratory management system designed to help medical laboratories manage patients, tests, records, and daily operations efficiently.",
+      tech: ["Laravel", "React", "Inertia.js", "Typescript", "Tailwind"],
+    
+      githubUrl: "https://github.com/Configcorp-com/grand-plaza",
+      liveUrl: "https://centrallab.centralstackhq.com",
+      image: "/images/centrallab.png",
     },
+    // {
+    //   title: "Grand Plaza",
+    //   description:
+    //     "A multi-vendor e-commerce platform that allows multiple sellers to manage their products and customers while providing buyers with a seamless shopping experience.",
+    //   tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
+    //   githubUrl: "https://github.com/Configcorp-com/grand-plaza",
+    //   liveUrl: "#",
+    //   image: "/ecommerce-placeholder.jpg",
+    // },
   ];
-
   const otherProjects = [
-    "Construction Site",
-    "Weather App",
-    "Pomodoro Timer",
-    "Temperature Converter",
-    "Portfolio Site",
-    "Simple Calculator",
+    {
+      name: "Grand Plaza",
+      description:
+        "A multi-vendor e-commerce platform that allows multiple sellers to manage their products and customers while providing buyers with a seamless shopping experience.",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Laravel"],
+    },
+    //   {
+    //   name: "Central Lab",
+    //   description:
+    //     "A laboratory management system designed to help medical laboratories manage patients, tests, records, and daily operations efficiently.",
+    //   tech: ["Laravel", "React", "Inertia.js"],
+    // },
+    {
+      name: "Tower Class",
+      description:
+        "A school management system built to simplify academic operations, student records, class management, and administrative workflows.",
+      tech: ["React", "Laravel", "Tailwind CSS"],
+    },
+    {
+      name: "Dashbox",
+      description:
+        "An admin-based management system focused on providing organized dashboards, data management, and administrative control.",
+      tech: ["React", "TypeScript", "Tailwind CSS"],
+    },
+    {
+      name: "Ticketing System",
+      description:
+        "A ticket management platform designed to handle requests, track issues, and improve communication between users and administrators.",
+      tech: ["React", "Laravel", "Database Management"],
+    },
   ];
 
   return (
@@ -49,7 +81,7 @@ export default function Projects() {
               }`}
             >
               <div className="md:col-span-7 relative group rounded-lg overflow-hidden">
-                <div className="absolute inset-0 bg-[#64ffda] bg-opacity-10 z-10 transition-opacity duration-300 group-hover:opacity-0 rounded-lg"></div>
+                {/* <div className="absolute inset-0 bg-[#64ffda] bg-opacity-10 z-10 transition-opacity duration-300 group-hover:opacity-0 rounded-lg"></div> */}
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -114,12 +146,12 @@ export default function Projects() {
 
           <div className="mt-24">
             <h3 className="text-2xl font-bold text-white mb-8 relative after:content-[''] after:block after:w-12 after:h-1 after:bg-[#64ffda] after:mt-2">
-             Other Hands on Projects
+              Other Hands on Projects
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {otherProjects.map((project) => (
                 <div
-                  key={project}
+                  key={project.name}
                   className="bg-[#112240] rounded-lg p-6 hover:transform hover:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-[#64ffda]/10"
                 >
                   <div className="flex justify-between items-start mb-6">
@@ -146,18 +178,23 @@ export default function Projects() {
                     </div>
                   </div>
                   <h4 className="text-white font-bold text-lg mb-3 hover:text-[#64ffda] transition-colors">
-                    <Link href="https://github.com/iamjaytru" target="_blank" rel="noopener noreferrer">
-                      {project}
+                    <Link
+                      href="https://github.com/iamjaytru"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.name}
                     </Link>
                   </h4>
                   <p className="text-primary/60 text-sm mb-4">
-                    A {project.toLowerCase()} built with modern web
-                    technologies.
-                  </p>
+                    {" "}
+                    {project.description}{" "}
+                  </p>{" "}
                   <div className="flex flex-wrap gap-2 text-xs text-primary/60 font-mono">
-                    <span>React</span>
-                    <span>TypeScript/Javascript</span>
-                    <span>Tailwind</span>
+                    {" "}
+                    {project.tech.map((tech) => (
+                      <span key={tech}>{tech}</span>
+                    ))}{" "}
                   </div>
                 </div>
               ))}

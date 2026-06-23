@@ -3,7 +3,7 @@
 import { useState } from "react";
 import SideBar from "./sidebar";
 
-type ExperienceTab = "Internship" | "Bootcamp" | "Education";
+type ExperienceTab = "Projects" | "Leadership" | "Learning";
 
 interface ExperienceData {
   title: string;
@@ -13,43 +13,46 @@ interface ExperienceData {
 }
 
 const EXPERIENCE_TABS: { id: ExperienceTab; label: string }[] = [
-  { id: "Internship", label: "Internship" },
-  { id: "Bootcamp", label: "Bootcamp" },
-  { id: "Education", label: "Education" },
+  { id: "Projects", label: "Projects" },
+  { id: "Leadership", label: "Leadership" },
+  { id: "Learning", label: "Learning" },
 ];
 
 const EXPERIENCE_DATA: Record<ExperienceTab, ExperienceData> = {
-  Internship: {
-    title: "Frontend Development Intern",
-    company: "CentralStack Technologies",
-    period: "2024",
+  Projects: {
+    title: "Frontend Developer",
+    company: "Independent Projects",
+    period: "2024 - Present",
     points: [
-      "Assisted in developing responsive UI components using React and TypeScript",
-      "Collaborated with senior developers to implement new features",
-      "Learned best practices for code organization and version control",
+      "Built and developed multiple production-ready applications including multi-vendor e-commerce platforms, management systems, and business solutions.",
+      "Developed MyStorez, a multi-vendor e-commerce platform focused on helping businesses create online stores and manage digital sales.",
+      "Created systems including Grand Plaza, Central Lab, Tower Class, Dashbox, and Ticketing System to solve real-world business challenges.",
     ],
   },
-  Bootcamp: {
-    title: "Full-Stack Bootcamp",
-    company: "Code Academy",
-    period: "2023",
+
+  Leadership: {
+    title: "CEO & Lead Developer",
+    company: "MyStorez",
+    period: "2026 - Present",
     points: [
-      "Learned full-stack development with React and Node.js",
-      "Built projects to solidify understanding of concepts",
-      "Collaborated with peers on group assignments",
+      "Leading the development and growth of MyStorez, a platform helping businesses build and manage their online presence.",
+      "Designed product features, user experience, and technical solutions to support vendors and customers.",
+      "Combined business strategy and software development to build a scalable marketplace solution.",
     ],
   },
-  Education: {
-    title: "Bachelor of Computer Science",
-    company: "University of Tech",
-    period: "2020-2024",
+
+  Learning: {
+    title: "Software Development Journey",
+    company: "Self-Taught Developer",
+    period: "2024 - Present",
     points: [
-      "Specialized in software engineering",
-      "Completed coursework in algorithms and data structures",
-      "Participated in hackathons and coding competitions",
+      "Started learning software development through self-study and hands-on projects.",
+      "Continuously improving skills in modern frontend development, backend integration, and software architecture.",
+      "Focused on building practical applications that solve real problems rather than only theoretical projects.",
     ],
   },
 };
+
 
 export default function ExperienceSection() {
   const [selectedTab, setSelectedTab] = useState<ExperienceTab>(
@@ -144,7 +147,7 @@ export default function ExperienceSection() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col pr-4">
+      <div className="flex flex-col pr-2">
         <SideBar />
       </div>
     </section>

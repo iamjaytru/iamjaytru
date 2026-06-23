@@ -18,7 +18,7 @@ export default function SideBar({
   return (
     <div
       className={cn(
-        "relative hidden md:block right-15 top-12 h-full w-12 bg-[#0a192f] md:items-center md:justify-center transition-all duration-300",
+        "relative hidden md:block right-6 top-15 h-full w-12 bg-[#0a192f] md:items-center md:justify-center transition-all duration-300",
         isHovered && "w-16",
         className
       )}

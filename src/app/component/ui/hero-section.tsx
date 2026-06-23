@@ -1,30 +1,29 @@
-
 import About from "./about";
 import SocialLinks from "./social-links";
 
 export default function HeroSection() {
-  
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between h-full gap-8 md:gap-12">
-      <div className="flex flex-col w-full md:w-auto flex-1 pl-4 space-y-4 md:space-y-6">
-        <header className="space-y-2">
-          <h3 className="text-xs sm:text-sm text-[#64ffda] tracking-widest pb-2 md:pb-3">
-            Hi, My name is
-          </h3>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary leading-tight">
-            Chukuweike Jude
-          </h1>
-          <h2 className="text-2xl sm:text-3xl font-medium text-[#9594aa]">
-            Junior Frontend Developer
-          </h2>
-        </header>
+    <div className="flex flex-col md:flex-row items-center justify-between gap-12 min-h-screen">
+      <div className="flex-1 space-y-6">
+        <p className="text-[#64ffda] text-lg">Hi, my name is</p>
+
+        <h1 className="text-5xl font-bold text-primary">
+          Chukuweike Jude
+        </h1>
+
+        <h2 className="text-2xl sm:text-4xl font-semibold text-primary/70">
+          Frontend Developer
+        </h2>
 
         <p className="text-primary/60 sm:text-primary/40 text-base sm:text-lg max-w-lg">
-          I&apos;m passionate about building responsive, accessible web applications
-          with modern technologies.
+          I build modern, user-focused web applications and digital
+          experiences that solve real-world problems. With experience
+          developing e-commerce platforms, management systems, and
+          business solutions, I enjoy turning ideas into products that
+          people can use and businesses can grow with.
         </p>
 
-       <SocialLinks />
+        <SocialLinks />
       </div>
 
       <div className="flex flex-1 justify-center w-full md:w-auto">
